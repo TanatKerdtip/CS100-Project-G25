@@ -6,6 +6,87 @@
   font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
 
+[data-theme="second"] {
+  --primary-bg: #0B2447;
+  --secondary-bg: #19376D;
+  --gray: #576CBC;
+  --font: #A5D7E8;
+  font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+[class*="col-"]{
+  width: 100%;
+  float: left;
+}
+@media screen and (max-width: 576px) {
+  body{
+      background-color: #802f2f;
+  }
+}
+/*phone*/
+@media only screen and (max-width: 600px) {
+  .col-1 {width: 8.33%;}
+  .col-2 {width: 16.66%;}
+  .col-3 {width: 25%;}
+  .col-4 {width: 33.33%;}
+  .col-5 {width: 41.66%;}
+  .col-6 {width: 50%;}
+  .col-7 {width: 58.33%;}
+  .col-8 {width: 66.66%;}
+  .col-9 {width: 75%;}
+  .col-10 {width: 83.33%;}
+  .col-11 {width: 91.66%;}
+  .col-12 {width: 100%;}
+ 
+  }
+  
+
+/* 600px*/
+@media only screen and (min-width: 600px) {
+  .col-s-1 {width: 8.33%;}
+  .col-s-2 {width: 16.66%;}
+  .col-s-3 {width: 25%;}
+  .col-s-4 {width: 32%;}
+  .col-s-5 {width: 41.66%;}
+  .col-s-6 {width: 50%;}
+  .col-s-7 {width: 58.33%;}
+  .col-s-8 {width: 66.66%;}
+  .col-s-9 {width: 75%;}
+  .col-s-10 {width: 83.33%;}
+  .col-s-11 {width: 91.66%;}
+  .col-s-12 {width: 100%;}
+}
+
+/*tablets   */
+@media only screen and (min-width: 768px) {
+  .col-d-1 {width: 8.33%;}
+  .col-d-2 {width: 16.66%;}
+  .col-d-3 {width: 25%;}
+  .col-d-4 {width: 32%;}
+  .col-d-5 {width: 41.66%;}
+  .col-d-6 {width: 50%;}
+  .col-d-7 {width: 58.33%;}
+  .col-d-9 {width: 75%;}
+  .col-d-10 {width: 83.33%;}
+  .col-d-11 {width: 91.66%;}
+  .col-d-12 {width: 100%;}
+} 
+/*laptops*/
+@media only screen and (min-width: 992px) {
+  .col-l-1 {width: 8.33%;}
+  .col-l-2 {width: 16.66%;}
+  .col-l-3 {width: 25%;}
+  .col-l-4 {width: 32%;}
+  .col-l-5 {width: 41.66%;}
+  .col-l-6 {width: 50%;}
+  .col-l-7 {width: 58.33%;}
+  .col-l-9 {width: 75%;}
+  .col-l-10 {width: 83.33%;}
+  .col-l-11 {width: 91.66%;}
+  .col-l-12 {width: 100%;}
+
+} 
+
 h6,
 h5,
 h4,
@@ -21,6 +102,7 @@ label {
 body {
   height: 100vh;
   background-color: var(--secondary-bg);
+  transition: background-color 0.1s ease-in-out;
 }
 
 .navbar {
@@ -29,6 +111,7 @@ body {
   text-decoration: none;
   justify-content: space-between;
   background-color: var(--primary-bg);
+  transition: background-color 0.1s ease-in-out;
 }
 
 .btn-theme {
@@ -61,28 +144,28 @@ body {
 }
 
 .container {
-  display: flex;
+  display: block;
   flex-direction: row;
-  justify-content: center;
+  justify-content: center;  
 }
 
 .homepageCard {
-  width: 33.3%;
-  margin: 2%;
-  padding: 2%;
+  display: block;
+  margin: 0.6%;
+  padding: 0.6%;
   border: 2px solid var(--gray);
   border-radius: 1rem;
 }
 
 .photo {
   margin: 0 auto;
-  width: 60%;
+  width: 70%;
   display: block;
 }
 
 .name {
   text-align: center;
-  font-size: 1.8rem;
+  font-size: 1.7rem;
   line-height: 2rem;
   font-weight: 700;
   text-transform: uppercase;
@@ -151,6 +234,17 @@ body {
 
 .activityCard {
   width: 33.3%;
+  opacity: 100%;
+  margin: 2%;
+  padding: 2%;
+  border: 2px solid var(--gray);
+  border-radius: 1rem;
+  transition: width 1s, opacity 2s;
+}
+
+.activityCard.hidden {
+  opacity: 0;
+  width: 0;
   margin: 2%;
   padding: 2%;
   border: 2px solid var(--gray);
@@ -190,4 +284,21 @@ label {
 
 .submit {
   margin-top: 4px;
+}
+
+.date {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.activityInfo {
+  font-size: 1.4rem;
+  font-weight: 300;
+  text-align: center;
+  line-height: 1.8rem;
+}
+
+#descriptionOutput {
+  font-size: 1.2rem;
 }
