@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Web Project</title>
+
+    <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
+
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
+
+    <link href="../css/styles.css" rel="stylesheet" />
+    <link href="../css/reset.css" rel="stylesheet" />
+</head>
+
+<body onload="switchTheme()">
+    <!-- Navigation-->
+    <nav class="navbar">
+        <span class="btn-theme"><i class="fa-solid fa-circle-half-stroke" id="theme" onclick="switchTheme()"></i></span>
+        <ul class="nav-items">
+            <li class="nav-item"><a class="nav-link" href="../index.html">Homepage</a></li>
+            <li class="nav-item"><a class="nav-link active" href="activity.html">Activities</a></li>
+        </ul>
+    </nav>
+    <div class="container">
+        <!-- Form Container -->
+        <div class="activityCard">
+            <h2 class="heading">Activitiy form</h2>
+            <!-- Main Form -->
+            <form id="myForm" action="#" method="post">
+                <!-- Firstname and Lastname Field -->
+                <div class="form-group">
+                    <label for="fullname">Firstname and Lastname</label>
+                    <span id="fullnameError" class="error"></span>
+                    <input type="text" id="fullname" name="fullname" onblur="validateName()" />
+                </div>
+
+                <!-- Student ID Field -->
+                <div class="form-group">
+                    <label for="studentID">Student ID</label>
+                    <span id="studentIDError" class="error"></span>
+                    <input type="text" id="studentID" name="studentID" onblur="validateStudentID()" />
+                </div>
+
+                <!-- University Email Field -->
+                <div class="form-group">
+                    <label for="email">University Email</label>
+                    <span id="emailError" class="error"></span>
+                    <input type="email" id="email" name="email" onblur="validateEmail()" />
+                </div>
+
+                <!-- Phone Number Field -->
+                <div class="form-group">
+                    <label for="phoneNumber">Phone Number</label>
+                    <span id="phoneNumberError" class="error"></span>
+                    <input type="text" id="phoneNumber" name="phoneNumber" onblur="validatePhoneNumber()" />
+                </div>
+
+                <!-- Academic Year Field -->
+                <div class="form-group">
+                    <label for="academicYear">Academic Year</label>
+                    <span id="academicYearError" class="error"></span>
+                    <select id="academicYear" name="academicYear">
+                        <option value="" disabled selected>Select an option</option>
+                        <option value="2557">2557</option>
+                        <option value="2558">2558</option>
+                        <option value="2559">2559</option>
+                        <option value="2560">2560</option>
+                        <option value="2561">2561</option>
+                        <option value="2562">2562</option>
+                        <option value="2563">2563</option>
+                        <option value="2564">2564</option>
+                        <option value="2565">2565</option>
+                        <option value="2566">2566</option>
+                    </select>
+                </div>
+
+                <!-- Semester Field -->
+                <div class="form-group">
+                    <label for="semester">Semester</label>
+                    <span id="semesterError" class="error"></span>
+                    <select id="semester" name="semester">
+                        <option value="" disabled selected>Select an option</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="Summer">Summer</option>
+                    </select>
+                </div>
+
+                <!-- Faculty Field -->
+                <div class="form-group">
+                    <label for="faculty">Faculty</label>
+                    <span id="facultyError" class="error"></span>
+                    <select id="faculty" name="faculty" onchange="validateFaculty()">
+                        <option value="" disabled selected>Select an option</option>
+                    </select>
+                </div>
+
+                <!-- Work/Activity Title Field -->
+                <div class="form-group">
+                    <label for="workTitle">Work/Activity Title</label>
+                    <span id="workTitleError" class="error"></span>
+                    <input type="text" id="workTitle" name="workTitle" />
+                </div>
+
+                <!-- Type of Work/Activity Field -->
+                <div class="form-group">
+                    <label for="activityType">Type of Work/Activity</label>
+                    <span id="activityTypeError" class="error"></span>
+                    <select id="activityType" name="activityType">
+                        <option value="" disabled selected>Select an option</option>
+                        <option value="a">Select an option</option>
+                    </select>
+                </div>
+
+                <!-- Start Date/Time Field -->
+                <div class="form-group">
+                    <label for="startDate">Start Date/Time</label>
+                    <span id="startDateError" class="error"></span>
+                    <input type="datetime-local" id="startDate" name="startDate" />
+                </div>
+
+                <!-- End Date/Time Field -->
+                <div class="form-group">
+                    <label for="endDate">End Date/Time</label>
+                    <span id="endDateError" class="error"></span>
+                    <input type="datetime-local" id="endDate" name="endDate" />
+                </div>
+
+                <!-- Location Field -->
+                <div class="form-group">
+                    <label for="location">Location</label>
+                    <span id="locationError" class="error"></span>
+                    <input type="text" id="location" name="location" />
+                </div>
+
+                <!-- Description Field -->
+                <div class="form-group">
+                    <label for="description">Description</label>
+                    <span id="descriptionError" class="error"></span>
+                    <textarea id="description" name="description" rows="2"></textarea>
+                </div>
+
+                <!-- Submit Button -->
+                <div class="form-group">
+                    <input type="submit" value="Submit" />
+                </div>
+            </form>
+        </div>
+        <div id="activityCard" class="activityCard hidden">
+            <h2 id="workTitleOutput" class="heading">Activitiy form</h2>
+            <div class="divider">
+                <div class="divider-line"></div>
+                <div class="divider-icon"><i class="fa-regular fa-clock"></i></div>
+                <div class="divider-line"></div>
+            </div>
+            <div class="activityInfo">
+                <div class="date">
+                    <div class="col">
+                        <h2 id="startTimeOutput"></h2>
+                        <h2 id="startDateOutput"></h2>
+                    </div>
+                    <div class="divider-icon"><i class="fa-solid fa-arrow-right"></i></div>
+                    <div class="col">
+                        <h2 id="endTimeOutput"></h2>
+                        <h2 id="endDateOutput"></h2>
+                    </div>
+                </div>
+                <h2 id="locationOutput"></h2>
+                <div class="divider">
+                    <div class="divider-line"></div>
+                    <div class="divider-icon"><i class="fas fa-running"></i></div>
+                    <div class="divider-line"></div>
+                </div>
+                <h2 id="activityTypeOutput"></h2>
+                <h2 id="descriptionOutput"></h2>
+                <div class="divider">
+                    <div class="divider-line"></div>
+                    <div class="divider-icon"><i class="fa-solid fa-info"></i></div>
+                    <div class="divider-line"></div>
+                </div>
+                <h2 id="fullnameOutput"></h2>
+                <h2 id="studentIDOutput"></h2>
+                <h2 id="emailOutput"></h2>
+                <h2 id="phoneNumberOutput"></h2>
+                <h2 id="academicYearOutput"></h2>
+                <h2 id="semesterOutput"></h2>
+                <h2 id="facultyOutput"></h2>
+            </div>
+        </div>
+    </div>
+    </section>
+
+    <script src="../js/script.js"></script>
+    <script src="../js/themes.js"></script>
+</body>
+
+</html>

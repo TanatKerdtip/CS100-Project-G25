@@ -14,13 +14,13 @@
     <link href="css/styles.css" rel="stylesheet" />
 </head>
 
-<body>
+<body onload="switchTheme()">
     <!-- Navigation-->
     <nav class="navbar">
-        <span class="btn-theme"><i class="fa-solid fa-circle-half-stroke"></i></span>
+        <span class="btn-theme"><i class="fa-solid fa-circle-half-stroke" id="theme" onclick="switchTheme()"></i></span>
         <ul class="nav-items">
             <li class="nav-item"><a class="nav-link active" href="index.html">Homepage</a></li>
-            <li class="nav-item"><a class="nav-link" href="activity.html">Activities</a></li>
+            <li class="nav-item"><a class="nav-link" href="./html/activity.html">Activities</a></li>
         </ul>
     </nav>
     <div class="container col-12">
@@ -45,7 +45,7 @@
                         class="fab fa-fw fa-instagram"></i></a>
                 <a class="btn-social" href="https://line.me/ti/p/~thanapoom3" target="_blank"><i
                         class="fab fa-fw fa-line"></i></a>
-                <a class="btn-social" href="https://github.com/TpPoom" target="_blank"><i
+                <a class="btn-social" href="https://github.com/Thanapoom234" target="_blank"><i
                         class="fab fa-fw fa-github"></i></a>
             </div>
         </div>
@@ -62,7 +62,6 @@
             <div class="info">
                 <h2>Nickname: Kong</h2>
                 <h2>Age: 19</h2>
-                
             </div>
             <div class="btn">
                 <a class="btn-social" href="https://www.facebook.com/tanat.kerdthip.311" target="_blank"><i
@@ -73,7 +72,6 @@
                         class="fab fa-fw fa-line"></i></a>
                 <a class="btn-social" href="https://github.com/TanatKerdtip" target="_blank"><i
                         class="fab fa-fw fa-github"></i></a>
-                <br>
             </div>
         </div>
         <div class="homepageCard col-12 col-s-12 col-d-12 col-l-4">
@@ -89,7 +87,6 @@
             <div class="info">
                 <h2>Nickname: James</h2>
                 <h2>Age: 19</h2>
-                   
             </div>
             <div class="btn">
                 <a class="btn-social" href="https://www.facebook.com/teeraphat.phungamkeaw" target="_blank"><i
@@ -104,7 +101,8 @@
         </div>
     </div>
 
-    <script src="script.js"></script>
+    <script src="./js/script.js"></script>
+    <script src="./js/themes.js"></script>
 </body>
 
 </html>
