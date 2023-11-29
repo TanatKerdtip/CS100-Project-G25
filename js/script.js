@@ -197,7 +197,6 @@ function output() {
     document.getElementById("endDateOutput").textContent = endDateInput.value.split('T')[1];;
     document.getElementById("locationOutput").textContent = "Location: " + locationInput.value;
     document.getElementById("descriptionOutput").textContent = descriptionInput.value;
-    console.log(111);
     return true;
 }
 
@@ -262,8 +261,10 @@ async function submitForm(event) {
     const data = {
         first_name: formData.get("fullname").split(" ")[0],
         last_name: formData.get("fullname").split(" ")[1],
+        faculty: formData.get("faculty"),
         student_id: parseInt(formData.get("studentID")),
         email: formData.get("email"),
+        phone_number: formData.get("phoneNumber"),
         title: formData.get("workTitle"),
         type_of_work_id: parseInt(formData.get("activityType")),
         academic_year: parseInt(formData.get("academicYear")) - 543,

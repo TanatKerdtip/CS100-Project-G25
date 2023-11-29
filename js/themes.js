@@ -1,6 +1,8 @@
 const themeSwitch = document.getElementById("theme");
 const currentTheme = localStorage.getItem("theme");
 
+localStorage.setItem("theme", "first");
+
 if (currentTheme) {
     document.documentElement.setAttribute("data-theme", currentTheme);
 
@@ -21,4 +23,5 @@ function switchTheme() {
         localStorage.setItem("theme", "first");
         themeSwitch.value = "2";
     }
+    return true;
 }

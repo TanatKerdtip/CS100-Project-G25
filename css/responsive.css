@@ -4,13 +4,9 @@
     .homepageCard {
         width: 100% !important;
     }
-}
 
-@media only screen and (max-width: 768px) {
-
-    /* For tablets: */
     .navbar {
-        padding: 1rem 2rem !important;
+        padding: 1rem 1.5rem !important;
     }
 
     .homepageCard {
@@ -23,7 +19,7 @@
     }
 
     .btn-social {
-        margin: 0 1rem;
+        margin: 0 0.4rem;
     }
 }
 

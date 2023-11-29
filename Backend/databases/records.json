@@ -2,8 +2,10 @@
   {
     "first_name": "CSTU",
     "last_name": "TA100",
-    "student_id": 123456,
+    "faculty": "คณะนิติศาสตร์",
+    "student_id": 1234567890,
     "email": "ta100@cstu.com",
+    "phone_number": "0123456789",
     "title": "CSTU TA100",
     "type_of_work_id": 1,
     "academic_year": 2023,
