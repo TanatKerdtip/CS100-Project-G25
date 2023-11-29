@@ -21,6 +21,10 @@
     .btn-social {
         margin: 0 0.4rem;
     }
+
+    .activityInfo{
+        font-size :1.0rem;
+    }
 }
 
 @media only screen and (max-width: 1024px) {
