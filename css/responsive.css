@@ -1,0 +1,61 @@
+@media only screen and (max-width: 600px) {
+
+    /* For phone: */
+    .homepageCard {
+        width: 100% !important;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+
+    /* For tablets: */
+    .navbar {
+        padding: 1rem 2rem !important;
+    }
+
+    .homepageCard {
+        width: 80% !important;
+        padding: 5%;
+    }
+
+    .activityCard {
+        width: 80% !important;
+    }
+
+    .btn-social {
+        margin: 0 1rem;
+    }
+}
+
+@media only screen and (max-width: 1024px) {
+
+    /* For labtop: */
+    .navbar {
+        padding: 1rem 3rem;
+    }
+
+    .container {
+        flex-direction: column;
+        justify-content: space-around;
+    }
+
+    .name {
+        margin-top: 2rem;
+    }
+
+    .homepageCard {
+        margin: 2% auto;
+        width: 60%;
+    }
+
+    .activityCard {
+        margin: 2% auto;
+        width: 60%;
+    }
+
+    .line {
+        width: 50%;
+        height: 0.25rem;
+        margin: 0 auto;
+    }
+}

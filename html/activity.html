@@ -11,6 +11,7 @@
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
 
     <link href="../css/styles.css" rel="stylesheet" />
+    <link href="../css/responsive.css" rel="stylesheet" />
     <link href="../css/reset.css" rel="stylesheet" />
 </head>
 
@@ -23,9 +24,9 @@
             <li class="nav-item"><a class="nav-link active" href="activity.html">Activities</a></li>
         </ul>
     </nav>
-    <div class="container col-12">
+    <div class="container">
         <!-- Form Container -->
-        <div class="activityCard col-12 col-s-12 col-d-12 col-l-5 ">
+        <div class="activityCard">
             <h2 class="heading">Activitiy form</h2>
             <!-- Main Form -->
             <form id="myForm" action="#" method="post">
@@ -110,7 +111,6 @@
                     <span id="activityTypeError" class="error"></span>
                     <select id="activityType" name="activityType">
                         <option value="" disabled selected>Select an option</option>
-                        <option value="a">Select an option</option>
                     </select>
                 </div>
 
@@ -148,7 +148,8 @@
                 </div>
             </form>
         </div>
-        <div id="activityCard" class="activityCard hidden col-12 col-s-12 col-d-12 col-l-5">
+        <div class="line"></div>
+        <div id="activityCard" class="activityCard hidden">
             <h2 id="workTitleOutput" class="heading">Activitiy form</h2>
             <div class="divider">
                 <div class="divider-line"></div>
@@ -184,6 +185,11 @@
                 <h2 id="studentIDOutput"></h2>
                 <h2 id="emailOutput"></h2>
                 <h2 id="phoneNumberOutput"></h2>
+                <div class="divider">
+                    <div class="divider-line"></div>
+                    <div class="divider-icon"><i class="fas fa-book-open"></i></div>
+                    <div class="divider-line"></div>
+                </div>
                 <h2 id="academicYearOutput"></h2>
                 <h2 id="semesterOutput"></h2>
                 <h2 id="facultyOutput"></h2>
