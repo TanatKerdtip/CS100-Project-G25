@@ -281,6 +281,7 @@ body {
 }
 
 .container {
+  justify-content:space-around;
   display: block;
   flex-direction: row;
   justify-content: center;
@@ -289,7 +290,7 @@ body {
 
 .homepageCard {
   display: flex;
-  flex-direction: column;
+  flex-direction: column; 
   margin: 0.6%;
   padding: 2% 0.6%;
   border: 2px solid var(--gray);
@@ -372,10 +373,9 @@ body {
 }
 
 .activityCard {
-  width: 33.3%;
   opacity: 100%;
-  margin: 2%;
-  padding: 2%;
+  margin: 0.6%;
+  padding: 1% 2%;
   border: 2px solid var(--gray);
   border-radius: 1rem;
   transition: width 1s, opacity 2s;
@@ -384,7 +384,7 @@ body {
 .activityCard.hidden {
   opacity: 0;
   width: 0;
-  margin: 2%;
+  margin: 0.6%;
   padding: 1% 2%;
   border: 2px solid var(--gray);
   border-radius: 1rem;
