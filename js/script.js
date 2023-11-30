@@ -195,10 +195,10 @@ function output() {
     document.getElementById("facultyOutput").textContent = facultyInputText;
     document.getElementById("workTitleOutput").textContent = workTitleInput.value;
     document.getElementById("activityTypeOutput").textContent = "Activity Type: " + activityTypeText;
-    document.getElementById("startTimeOutput").textContent = startDateInput.value.split('T')[0];
-    document.getElementById("startDateOutput").textContent = startDateInput.value.split('T')[1];
-    document.getElementById("endTimeOutput").textContent = endDateInput.value.split('T')[0];
-    document.getElementById("endDateOutput").textContent = endDateInput.value.split('T')[1];
+    document.getElementById("startTimeOutput").textContent = startDateInput.value.split('T')[1];
+    document.getElementById("startDateOutput").textContent = startDateInput.value.split('T')[0];
+    document.getElementById("endTimeOutput").textContent = endDateInput.value.split('T')[1];
+    document.getElementById("endDateOutput").textContent = endDateInput.value.split('T')[0];
     document.getElementById("locationOutput").textContent = "Location: " + locationInput.value;
     document.getElementById("descriptionOutput").textContent = descriptionInput.value;
     return true;
