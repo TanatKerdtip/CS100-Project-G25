@@ -182,15 +182,19 @@ function validateFormOnInput() {
 }
 
 function output() {
+    const facultyInputText = facultyTexts[facultyValues.indexOf(facultyInput.value)];
+    const activityTypeTexts = ["", "Course", "Activity", "Work", "Research", "Sports", "Competition", "Computer Science"];
+    const activityTypeText = activityTypeTexts[parseInt(activityTypeInput.value)];
+
     document.getElementById("fullnameOutput").textContent = "Name: " + fullnameInput.value;
     document.getElementById("studentIDOutput").textContent = "Student ID: " + studentIDInput.value;
     document.getElementById("emailOutput").textContent = "Email: " + emailInput.value;
     document.getElementById("phoneNumberOutput").textContent = "Phone Number: " + phoneNumberInput.value;
     document.getElementById("academicYearOutput").textContent = "Academic Year: " + academicYearInput.value;
     document.getElementById("semesterOutput").textContent = "Semester: " + semesterInput.value;
-    document.getElementById("facultyOutput").textContent = "Faculty: " + facultyInput.value;
+    document.getElementById("facultyOutput").textContent = facultyInputText;
     document.getElementById("workTitleOutput").textContent = workTitleInput.value;
-    document.getElementById("activityTypeOutput").textContent = "Activity Type: " + activityTypeInput.value;
+    document.getElementById("activityTypeOutput").textContent = "Activity Type: " + activityTypeText;
     document.getElementById("startTimeOutput").textContent = startDateInput.value.split('T')[0];
     document.getElementById("startDateOutput").textContent = startDateInput.value.split('T')[1];
     document.getElementById("endTimeOutput").textContent = endDateInput.value.split('T')[0];
