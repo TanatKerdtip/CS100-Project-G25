@@ -73,7 +73,7 @@ function validateStudentID() {
 function validateEmail() {
     const emailPattern = /^.+@dome\.tu\.ac\.th$/;
 
-    if (!emailPattern.test(emailInput.value) == -1 && emailInput.value != "") {
+    if (!emailPattern.test(emailInput.value) && emailInput.value != "") {
         emailError.textContent =
             'Enter "@dome.tu.ac.th" emali.';
         return false;
@@ -83,16 +83,16 @@ function validateEmail() {
     return true;
 }
 
-// Function to validate University Email
+// Function to validate Phone Number
 function validatePhoneNumber() {
     const phoneNumberPattern = /^0[0-9]{9}$/;
 
-    if (!phoneNumberPattern.test(emailInput.value) == -1 && emailInput.value != "") {
-        emailError.textContent =
-            'Enter "@dome.tu.ac.th" emali.';
+    if (!phoneNumberPattern.test(phoneNumberInput.value) && phoneNumberInput.value != "") {
+        phoneNumberError.textContent =
+            "Enter a 10-digit Phone Number.";
         return false;
     } else {
-        emailError.textContent = ""; // Clear the error message when valid
+        phoneNumberError.textContent = ""; // Clear the error message when valid
     }
     return true;
 }
@@ -193,8 +193,8 @@ function output() {
     document.getElementById("activityTypeOutput").textContent = "Activity Type: " + activityTypeInput.value;
     document.getElementById("startTimeOutput").textContent = startDateInput.value.split('T')[0];
     document.getElementById("startDateOutput").textContent = startDateInput.value.split('T')[1];
-    document.getElementById("endTimeOutput").textContent = endDateInput.value.split('T')[0];;
-    document.getElementById("endDateOutput").textContent = endDateInput.value.split('T')[1];;
+    document.getElementById("endTimeOutput").textContent = endDateInput.value.split('T')[0];
+    document.getElementById("endDateOutput").textContent = endDateInput.value.split('T')[1];
     document.getElementById("locationOutput").textContent = "Location: " + locationInput.value;
     document.getElementById("descriptionOutput").textContent = descriptionInput.value;
     return true;
